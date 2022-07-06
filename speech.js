@@ -2,13 +2,13 @@
 
 const synth = window.speechSynthesis;
 
-const textToSpeech = (string) => 
+function textToSpeech(string)
 {
   let voice = new SpeechSynthesisUtterance(string);
   voice.text = string;
   voice.lang = "en-IN";
   voice.volume = 1;
   voice.rate = 1;
-  voice.pitch = 2; // Can be 0, 1, or 2
+  voice.pitch = 1; // Can be 0, 1, or 2
   synth.speak(voice);
 }
